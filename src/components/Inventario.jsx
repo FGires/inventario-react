@@ -4,6 +4,9 @@ function Inventario({ goTo }) {
   return (
     <section className="screen active">
       <header className="appbar orange">
+        <button onClick={() => goTo("dashboard")} className="back-btn">
+            <span className="material-icons">home</span>
+        </button>
         <h2>Gestión de Inventarios</h2>
       </header>
 

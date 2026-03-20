@@ -120,6 +120,16 @@ html, body {
 .blue { background: #3f6f9a; }
 .light { background: #e5e5e5; color: black; }
 
+/* ================= Retorno home - Gest. Inventarios ================= */
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 /* ================= LISTAS ================= */
 .list {
   padding: 16px;
@@ -185,7 +195,7 @@ html, body {
   bottom: 0;
   width: 100%;
   background: white;
-  display: none; /* controlado por JS */
+  display: flex;
   justify-content: space-around;
   padding: 10px 0;
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1);

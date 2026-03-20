@@ -2,7 +2,7 @@ import React from "react";
 import NavButton from "./NavButton";
 
 function BottomNav({ screen, goTo, logout }) {
-  if (["login", "dashboard", "nuevoRegistro"].includes(screen)) {
+  if (["login"].includes(screen)) {
     return null;
   }
 
@@ -14,7 +14,7 @@ function BottomNav({ screen, goTo, logout }) {
 
   return (
     <nav className="bottom-nav">
-      {reglas[screen].map((item) => (
+      {(reglas[screen] || []).map((item) => (
         <NavButton
           key={item}
           destino={item}
