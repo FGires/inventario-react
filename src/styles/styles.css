@@ -1,0 +1,244 @@
+/* ================= RESET BÁSICO ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* ================= PANTALLAS ================= */
+.screen {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.screen.active {
+  display: flex; /* 🔴 CLAVE */
+  flex-direction: column;
+}
+
+/* ================= LOGIN ================= */
+#login {
+  position: relative;
+  min-height: 100vh;
+  background-color: #002b44;
+  background-size: 100%;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-blend-mode: soft-light;
+  animation: fondoLogin 18s infinite alternate;
+}
+
+@keyframes fondoLogin {
+  0% {
+    background-image: url("../img/fondo1.png");
+  }
+  50% {
+    background-image: url("../img/fondo2.png");
+  }
+  100% {
+    background-image: url("../img/fondo3.png");
+  }
+}
+
+.login-container {
+  background: #f3f3f3d6;
+  padding: 24px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.login-container input {
+  background: #f3f3f365;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-logo {
+  width: 290px;
+  height: 50px;
+  margin: 10px auto 20px;
+  background-image: url("../img/imageIncolnova.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+/* ================= BOTONES ================= */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #3f6f9a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= HEADER DASHBOARD ================= */
+.header {
+  background: #2b4e84;
+  color: white;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-content {
+  padding: 24px;
+}
+
+/* ================= CARDS ================= */
+.card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.orange { background: #ca7743; }
+.blue { background: #3f6f9a; }
+.light { background: #e5e5e5; color: black; }
+
+/* ================= LISTAS ================= */
+.list {
+  padding: 16px;
+  flex: 1;
+}
+
+.list-item {
+  background: white;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ================= FAB ================= */
+.fab {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #ca7743;
+  color: white;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* ================= FORM ================= */
+.form {
+  padding: 16px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* ================= APPBAR ================= */
+.appbar {
+  padding: 16px;
+  color: white;
+}
+
+.appbar.orange { background: #ab521b; }
+.appbar.blue { background: #3f6f9a; }
+
+
+/* ================= DIVIDER ================= */
+.divider {
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+/* ================= NAV INFERIOR ================= */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: none; /* controlado por JS */
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+/* Botón base */
+.nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  padding: 8px 0;
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #8dcbf1;
+  cursor: pointer;
+
+  transition: 
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.nav-btn .material-icons {
+  font-size: 22px;
+}
+
+/* Hover */
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Activo (pantalla actual) */
+.nav-btn.active {
+  background-color: #1da1f2;
+  color: #ffffff;
+}
+
+/* Salir */
+.nav-btn.logout {
+  color: #ff4d4f;
+}
+
+.nav-btn.logout:hover {
+  background-color: #ff4d4f;
+  color: #ffffff;
+}
+
+.red {
+  background: #c0392b;
+  color: white;
+}
